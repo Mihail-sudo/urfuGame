@@ -56,6 +56,7 @@ namespace Game
             this.player.TabIndex = 1;
             this.player.TabStop = false;
             this.player.Tag = "player";
+            this.player.Click += new System.EventHandler(this.player_Click);
             // 
             // gameTimer
             // 

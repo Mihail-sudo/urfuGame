@@ -14,11 +14,17 @@ namespace Game
     {
         bool goLeft, goRight, jumping, isGameOver;
         int jumpSpeed, force;
-        int playerSpeed = 10; 
+        int playerSpeed = 10;
+        bool playerColor = true;
 
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void player_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void MainGameTimerEvent(object sender, EventArgs e)
@@ -32,7 +38,7 @@ namespace Game
                 jumping = false;
             if (jumping)
             {
-                jumpSpeed = -8;
+                jumpSpeed = -10;
                 force -= 1;
             }
             else
@@ -61,6 +67,19 @@ namespace Game
                 goRight = true;
             if (e.KeyCode == Keys.Space && jumping == false)
                 jumping = true;
+            if (e.KeyCode == Keys.G) 
+            {
+                if (playerColor)
+                {
+                    player.BackColor = System.Drawing.Color.Chocolate;
+                    playerColor = false;
+                }
+                else
+                {
+                    player.BackColor = System.Drawing.Color.DarkSlateGray;
+                    playerColor = true;
+                }
+            }
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "<Pending>")]
@@ -74,6 +93,9 @@ namespace Game
                 jumping = false;
             if (e.KeyCode == Keys.Enter)
                 StartGame();
+            //if (e.KeyCode == Keys.G)
+              //  if (playerColor)
+                //    player.
         }
 
         private void StartGame() 
