@@ -57,7 +57,7 @@ namespace Game3
             this.bird.BackColor = System.Drawing.Color.Yellow;
             this.bird.Location = new System.Drawing.Point(30, 165);
             this.bird.Name = "bird";
-            this.bird.Size = new System.Drawing.Size(50, 50);
+            this.bird.Size = new System.Drawing.Size(40, 40);
             this.bird.TabIndex = 1;
             this.bird.TabStop = false;
             // 
@@ -112,7 +112,6 @@ namespace Game3
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bird)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.downWall)).EndInit();
